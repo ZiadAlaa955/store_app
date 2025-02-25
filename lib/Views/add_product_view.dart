@@ -24,12 +24,7 @@ class _AddProductViewState extends State<AddProductView> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Add Product'),
-          backgroundColor: Colors.white,
-        ),
+        appBar: AppBar(title: const Text('Add Product')),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Center(
