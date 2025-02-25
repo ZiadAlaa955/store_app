@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:store_app/Views/add_product_view.dart';
+import 'package:store_app/Views/cart_view.dart';
 import 'package:store_app/Views/home_view.dart';
 import 'package:store_app/Views/update_product_view.dart';
 import 'package:store_app/models/product_model.dart';
@@ -7,6 +8,7 @@ import 'package:store_app/models/product_model.dart';
 String homePage = '/';
 String updateProduct = '/updateProduct';
 String addProduct = '/addProduct';
+String cart = '/cart';
 
 GoRouter router = GoRouter(
   routes: <RouteBase>[
@@ -23,6 +25,10 @@ GoRouter router = GoRouter(
     GoRoute(
       path: addProduct,
       builder: (context, state) => const AddProductView(),
+    ),
+    GoRoute(
+      path: cart,
+      builder: (context, state) => const CartView(),
     ),
   ],
 );

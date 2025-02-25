@@ -25,7 +25,9 @@ class _UpdateProductViewState extends State<UpdateProductView> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
+          backgroundColor: Colors.white,
           centerTitle: true,
           title: const Text(
             'Update Product',

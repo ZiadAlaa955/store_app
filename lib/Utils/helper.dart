@@ -12,7 +12,9 @@ List<Widget> buildAppBarIconButtons(BuildContext context) {
       icon: const Icon(Icons.add, color: Colors.black),
     ),
     IconButton(
-      onPressed: () {},
+      onPressed: () {
+        GoRouter.of(context).push(cart);
+      },
       icon: const Icon(FontAwesomeIcons.cartShopping, color: Colors.black),
     ),
   ];

@@ -8,8 +8,8 @@ class GetAllProductService {
 
     List<ProductModel> productList = [];
 
-    for (int i = 0; i < jsonData.length; i++) {
-      productList.add(ProductModel.fromJson(jsonData[i]));
+    for (var product in jsonData) {
+      productList.add(ProductModel.fromJson(product));
     }
 
     return productList;
