@@ -32,3 +32,13 @@ OutlineInputBorder outlineBorder() {
     borderSide: const BorderSide(color: Colors.black),
   );
 }
+
+ThemeData appThemeData() {
+  return ThemeData(
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.white,
+      centerTitle: true,
+    ),
+  );
+}

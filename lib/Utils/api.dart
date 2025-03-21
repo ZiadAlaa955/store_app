@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 class Api {
   final Dio dio = Dio();
 
-  //Get Products
+  //Get
   Future<dynamic> get({required String url, String? token}) async {
     Map<String, dynamic> headers = {};
 
@@ -12,15 +12,20 @@ class Api {
     }
 
     try {
-      Response response = await dio.request(url);
+      Response response = await dio.get(
+        url,
+        options: Options(headers: headers),
+      );
 
-      return response.data;
+      dynamic jsonData = response.data;
+
+      return jsonData;
     } on Exception catch (e) {
       throw Exception('There is an error : ${e.toString()}');
     }
   }
 
-  //Add Product
+  //Add
   Future<dynamic> post(
       {required String url, Map<String, dynamic>? data, String? token}) async {
     Map<String, dynamic> headers = {};
@@ -30,16 +35,21 @@ class Api {
     }
 
     try {
-      Response response =
-          await dio.post(url, data: data, queryParameters: headers);
+      Response response = await dio.post(
+        url,
+        data: data,
+        options: Options(headers: headers),
+      );
 
-      return response.data;
+      dynamic jsonData = response.data;
+
+      return jsonData;
     } on Exception catch (e) {
       throw Exception('There is an error : ${e.toString()}');
     }
   }
 
-  //Update Product
+  //Update
   Future<dynamic> put(
       {required String url, Map<String, dynamic>? data, String? token}) async {
     Map<String, dynamic> headers = {};
@@ -54,9 +64,12 @@ class Api {
       Response response = await dio.put(
         url,
         data: data,
-        queryParameters: headers,
+        options: Options(headers: headers),
       );
-      return response.data;
+
+      dynamic jsonData = response.data;
+
+      return jsonData;
     } on Exception catch (e) {
       throw Exception('There is an error : ${e.toString()}');
     }

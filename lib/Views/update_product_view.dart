@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:store_app/Services/update_product_service.dart';
-import 'package:store_app/Utils/helper.dart';
+import 'package:store_app/Utils/app_utils.dart';
 import 'package:store_app/Widgets/custom_button.dart';
 import 'package:store_app/Widgets/custom_text_field.dart';
 import 'package:store_app/models/product_model.dart';

@@ -11,6 +11,7 @@ class UpdateProductService {
     required dynamic id,
   }) async {
     Map<String, dynamic> jsonData = await Api().put(
+      token: 'my token',
       url: 'https://fakestoreapi.com/products/$id',
       data: {
         'id': id,

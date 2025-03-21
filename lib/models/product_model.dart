@@ -1,5 +1,3 @@
-import 'package:store_app/models/raiting_model.dart';
-
 class ProductModel {
   final int id;
   final String title;
@@ -7,7 +5,6 @@ class ProductModel {
   final String description;
   final String category;
   final String image;
-  final RatingModel? rating;
 
   ProductModel({
     required this.id,
@@ -16,7 +13,6 @@ class ProductModel {
     required this.description,
     required this.category,
     required this.image,
-    required this.rating,
   });
 
   factory ProductModel.fromJson(jsonData) {
@@ -27,9 +23,6 @@ class ProductModel {
       description: jsonData['description'],
       category: jsonData['category'],
       image: jsonData['image'],
-      rating: jsonData['rating'] == null
-          ? null
-          : RatingModel.fromJson(jsonData['rating']),
     );
   }
 }
